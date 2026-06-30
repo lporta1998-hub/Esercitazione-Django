@@ -17,8 +17,11 @@ class PuntoVendita(models.Model):
     capienza = models.IntegerField(blank=True, null = True)
     è_un_bar = models.BooleanField(default=False)
 
+    """ class Meta:
+        verbose_plural_name = "Punti Vendita" """
+
     def __str__(self):
         return(
-            f"{seld.nome}"
-            f"({"bar" if seld.self.è_un_bar else "ristorante"})"
+            f"{self.nome}"
+            f"({"bar" if self.è_un_bar else "ristorante"})"
         )
