@@ -1,9 +1,10 @@
-from cocktails.views import PuntovenditaListView
+from django.urls import path
+from cocktails.views import PuntoVenditaListView
 
 urlpatterns = [
     path(
         'punto-vendita/',
-        PuntovenditaListView.as_view(),
+        PuntoVenditaListView.as_view(),
         name="puntovendita_list"
     ),
 ]
